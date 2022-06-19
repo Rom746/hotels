@@ -52,6 +52,6 @@ function multiplyNumeric (obj) {
         }
     }
 }
-
+ 
 multiplyNumeric(menu);
 
