@@ -50,7 +50,7 @@ function multiplyNumeric (obj) {
         if (typeof  obj[key] == Number) {
             obj[key] *= 2;
         }
-    }
+    } 
 }
  
 multiplyNumeric(menu);
