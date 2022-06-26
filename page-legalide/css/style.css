@@ -512,3 +512,100 @@ body.--lock {
 .item-about__title {
   padding-bottom: 5px;
 }
+
+.clients__list {
+  min-height: 175px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 30px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.clients__subscribe {
+  margin: 20px 32px;
+  padding: 30px 50px;
+  background: -webkit-gradient(linear, right top, left top, color-stop(-1.04%, #295C7A), to(#0072B5));
+  background: linear-gradient(270deg, #295C7A -1.04%, #0072B5 100%);
+  border-radius: 2px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 1150px) {
+  .clients__subscribe {
+    margin: 20px 0;
+    padding: 30px 0;
+  }
+}
+
+@media (max-width: 1150px) {
+  .clients__subscribe {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 30px;
+  }
+}
+
+.clients__text {
+  font-family: 'Martel';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: 0.1px;
+  color: #fff;
+  max-width: 253px;
+}
+
+.clients__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 1px solid #E6E6E6;
+  border-radius: 5px;
+}
+
+.clients__input {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 28px;
+  padding: 15px 20px;
+  background-color: #F9F9F9;
+}
+
+@media (max-width: 1150px) {
+  .clients__input {
+    padding-right: 0;
+  }
+}
+
+.clients__btn {
+  background-color: #D0A144;
+  color: #fff;
+  padding: 15px 21px;
+}
+
+@media (max-width: 1150px) {
+  .clients__btn {
+    padding: 15px 15px;
+  }
+}
