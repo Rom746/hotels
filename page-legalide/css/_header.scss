@@ -1,0 +1,125 @@
+.header {
+
+    width: 100%;
+    background-image: url(../img/header-back.png);
+    background-size: cover;
+
+    &__inner {
+        height: 104px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__logo {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    &__hero {
+        display: flex;
+        min-height: 680px;
+        height: 100%;
+
+        align-items: center;
+        position: relative;
+    }
+}
+
+
+.menu {
+
+    display: flex;
+    gap: 40px;
+
+    &__list {
+        display: flex;
+        gap: 21px;
+        align-items: center;
+    }
+
+    &__list-link {
+        font-weight: 600;
+        line-height: 24px;
+        color: $color--secondary;
+
+        &:hover {
+            color: $color--primary;
+            transition: all 0.4s ease;
+        }
+    }
+
+    &__button {
+        display: flex;
+        align-items: center;
+
+        &:hover {
+            path {
+                fill: $color--primary;
+                transition: all 0.4s ease;
+            }
+        }
+    }
+
+    &__toggle {}
+}
+
+.hero {
+
+    &__title {
+        font-weight: 900;
+        font-size: 58px;
+        line-height: 65px;
+        max-width: 510px;
+    }
+
+    &__text {
+        padding: 35px 0;
+    }
+
+
+    &__buttons {
+
+        display: flex;
+        gap: 10px;
+
+        & :first-child {
+            background-color: $brown;
+            color: $white;
+
+            &:hover {
+                background-color: $white;
+                color: $brown;
+            }
+        }
+
+        & :last-child {
+            color: $brown;
+            border: 1px solid $brown;
+
+            &:hover {
+                border: 1px solid $white;
+                background-color: $white;
+            }
+        }
+
+    }
+
+    &__button {
+        padding: 10px 36px;
+        border-radius: 37px;
+    }
+
+
+    &__image {
+        position: absolute;
+        left: 50%;
+        top: 0;
+        height: 100%;
+
+        & img {
+            height: 100%;
+        }
+    }
+}

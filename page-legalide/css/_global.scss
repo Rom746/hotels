@@ -1,0 +1,38 @@
+.wrapper {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.container {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 15px;
+
+    border: 1px solid red;
+}
+
+.title {
+    font-family: 'Martel', sans-serif;
+    font-style: normal;
+    letter-spacing: 0.2px;
+    color: $color--primary;
+}
+
+.btn {
+    font-weight: 700;
+    line-height: 28px;
+    text-align: center;
+    letter-spacing: 0.2px;
+
+    transition: all 0.5s ease;
+}
