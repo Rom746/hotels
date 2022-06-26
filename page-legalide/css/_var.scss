@@ -24,30 +24,3 @@ $color--b: #295C7A;
 $brown: #784F33;
 $white: #fff;
 
-
-// Mixin and keyframes
-
-@keyframes vnew {
-    0% {
-      opacity: 0;
-      transform: scale(0); 
-    }
-  
-    100% {
-      opacity: 1;
-      transform: scale(1); 
-    } 
-}
-@keyframes merged {
-    0% {
-      transform: scale(0); 
-    }
-  
-    50% {
-      transform: scale(1.2); 
-    }
-  
-    100% {
-      transform: scale(1); 
-    } 
-}

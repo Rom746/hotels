@@ -75,3 +75,10 @@ body {
         font-size: 14px;
     }
 }
+
+.--left {
+    text-align: left;
+    @media (max-width: $breakpointA) {
+        text-align: center;
+    }
+}
