@@ -3,12 +3,21 @@
     width: 100%;
     background-image: url(../img/header-back.png);
     background-size: cover;
+    // position: relative;
 
     &__inner {
         height: 104px;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        position: relative;
+
+        @media (max-width: $breakpointB) {
+            // position: fixed;
+            // width: 100%;
+        }
+
+        z-index: 100;
     }
 
     &__logo {
@@ -18,12 +27,19 @@
     }
 
     &__hero {
-        display: flex;
-        min-height: 680px;
-        height: 100%;
+        padding-top: 160px;
+        text-align: center;
 
-        align-items: center;
-        position: relative;
+
+
+        @media (min-width: $breakpointB) {
+            display: flex;
+            min-height: 680px;
+            height: 100%;
+            padding-top: 80px;
+            text-align: left;
+            position: relative;
+        }
     }
 }
 
@@ -39,6 +55,27 @@
         align-items: center;
     }
 
+    &__list-items {
+
+        &._active {
+            left: -5%;
+        }
+
+        @media (max-width: $breakpointB) {
+            flex-direction: column;
+            position: absolute;
+            width: 110%;
+            top: 0;
+            left: 110%;
+            padding: 164px 0 96px 0;
+
+            background-color: $white;
+            z-index: -1;
+            transition: left 0.3s ease 0s;
+
+        }
+    }
+
     &__list-link {
         font-weight: 600;
         line-height: 24px;
@@ -47,6 +84,11 @@
         &:hover {
             color: $color--primary;
             transition: all 0.4s ease;
+        }
+
+        @media (max-width: $breakpointB) {
+            font-size: 30px;
+            line-height: 45px;
         }
     }
 
@@ -60,24 +102,59 @@
                 transition: all 0.4s ease;
             }
         }
+
+        
     }
 
-    &__toggle {}
+    &__toggle {
+        display: none;
+
+        @media (max-width: $breakpointB) {
+            display: flex;
+        }
+    }
 }
 
+
 .hero {
+
+    &__content {
+
+        @media (max-width: $breakpointB) {
+
+            display: flex;
+            flex-direction: column;
+            // justify-content: center;
+            align-items: center;
+            padding-bottom: 108px;
+        }
+    }
 
     &__title {
         font-weight: 900;
         font-size: 58px;
+
         line-height: 65px;
         max-width: 510px;
+
+
+        @media (max-width: $breakpointB) {
+            max-width: 600px;
+
+            font-weight: 700;
+            font-size: calc(35px + 18 * ((100vw - 320px) / (970 - 320)));
+            line-height: calc(45px + 25 * ((100vw - 320px) / (970 - 320)));
+        }
     }
 
     &__text {
         padding: 35px 0;
-    }
+        max-width: 376px;
 
+        font-weight: 500;
+        font-size: 20px;
+        font-family: 'Montserrat', sans-serif;
+    }
 
     &__buttons {
 
@@ -104,6 +181,11 @@
             }
         }
 
+        @media (max-width: $breakpointB) {
+            flex-direction: column;
+            gap: 20px;
+        }
+
     }
 
     &__button {
@@ -113,12 +195,13 @@
 
 
     &__image {
-        position: absolute;
-        left: 50%;
-        top: 0;
-        height: 100%;
 
-        & img {
+        max-width: 100%;
+
+        @media (min-width: $breakpointA) {
+            position: absolute;
+            left: 50%;
+            top: 0;
             height: 100%;
         }
     }

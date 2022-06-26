@@ -11,12 +11,22 @@ body {
     font-weight: 400;
     font-size: 14px;
     line-height: 20px;
+
+    color: $color--secondary;
+
+    &.--lock {
+        overflow: hidden;
+    }
 }
 
 .container {
     max-width: 1080px;
     margin: 0 auto;
     padding: 0 15px;
+
+    @media (max-width: $breakpointA) {
+        // max-width: 970px;
+    }
 
     border: 1px solid red;
 }
