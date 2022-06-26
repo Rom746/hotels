@@ -36,6 +36,10 @@ body {
     font-style: normal;
     letter-spacing: 0.2px;
     color: $color--primary;
+
+    &--white {
+        color: $white;
+    }
 }
 
 .btn {
@@ -45,4 +49,21 @@ body {
     letter-spacing: 0.2px;
 
     transition: all 0.5s ease;
+}
+
+.block-text {
+
+    &__title {
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 50px;
+        text-align: center;
+        padding-bottom: 10px;
+    }
+
+    &__text {
+        max-width: 431px;
+        text-align: center;
+        margin: 0 auto;
+    }
 }
