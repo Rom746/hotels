@@ -40,6 +40,13 @@ body {
     &--white {
         color: $white;
     }
+
+    &--card {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0.1px;
+    }
 }
 
 .btn {
@@ -65,5 +72,6 @@ body {
         max-width: 431px;
         text-align: center;
         margin: 0 auto;
+        font-size: 14px;
     }
 }
