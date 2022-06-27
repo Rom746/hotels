@@ -66,3 +66,39 @@ body {
         }
     }
 }
+
+
+
+.slider {
+
+    position: relative;
+    overflow: hidden;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+
+   
+
+    // .slider__wrapper
+
+    &__wrapper {
+        position: relative;
+        overflow: hidden;
+        // background-color: #eee;
+    }
+
+    // .slider__items
+
+    &__items {
+        display: flex;
+        transition: transform .5s ease;
+    }
+
+    // .slider__item
+
+    &__item {
+        flex: 0 0 100%;
+        max-width: 100%;
+        position: relative;
+    }
+}
