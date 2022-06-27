@@ -1,0 +1,179 @@
+.tarifs {
+    background-color: $color--bg;
+
+    &__title {
+        padding: 51px 0 25px 0;
+    }
+
+    &__tabs {
+        padding: 0 20px;
+
+        background-color: $white;
+        box-shadow: 0px 64px 194px rgba(0, 0, 0, 0.1);
+        border-radius: 15px;
+    }
+
+    &__best-tab {
+        padding: 2px 10px;
+        margin-left: 15px;
+
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 18px;
+        color: $white;
+
+        background-color: $color--secondary;
+        border-radius: 10px;
+    }
+}
+
+.tabs {
+
+    &__items {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+
+        padding: 50px 71px;
+    }
+
+    &__item {
+
+        font-size: 20px;
+        line-height: 28px;
+        color: $color--primary;
+        transition: border 0.9s ease;
+
+        &--active {
+            font-weight: 700;
+            border-bottom: 1px solid $color--secondary;
+        }
+
+        &:hover {
+            border-bottom: 1px solid $color--secondary;
+        }
+
+    }
+
+    &__block {
+        display: none;
+        padding-bottom: 23px;
+
+        &--active {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+}
+
+.tabs-inet {
+
+    &__list {
+        display: flex;
+        gap: 6px;
+        padding-bottom: 82px;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        padding: 57px 17px 37px 17px;
+    }
+
+    &__item--best {
+        background: linear-gradient(180deg, #273158 0%, #0C244D 100%);
+        box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.45);
+        border-radius: 30px;
+
+        color: $white;
+
+        position: relative;
+
+        &::before {
+            content: 'Хит';
+
+            position: absolute;
+            top: 25px;
+            left: 0;
+
+            padding: 2px 10px;
+            margin-left: 15px;
+
+            font-weight: 700;
+            font-size: 12px;
+            line-height: 18px;
+            color: $color--primary;
+
+            background-color: $white;
+            border-radius: 10px;
+        }
+    }
+
+    &__btn {
+        max-width: 264px;
+    }
+}
+
+
+.inet-item {
+
+    &__title {
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 44px;
+    }
+
+    &__text {
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 35px;
+        position: relative;
+        padding-left: 34px;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 5px;
+            left: 0;
+            width: 22px;
+            height: 22px;
+            background: url('../img/tarifs.svg');
+        }
+    }
+
+    &__link {
+        font-size: 18px;
+        line-height: 25px;
+        color: inherit;
+        
+
+        padding-bottom: 15px;
+        border-bottom: 1px solid $color--primary-a;
+
+        &:hover {
+            border-bottom: 1px solid $color--secondary;
+            color: $color--secondary;
+        }
+    }
+
+    &__pay {
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 44px;
+
+        & span {
+            font-weight: 400;
+            font-size: 18px;
+        }
+    }
+
+    &__btn {
+        padding: 5px 45px;
+        font-size: 18px;
+        line-height: 25px;
+    }
+}
