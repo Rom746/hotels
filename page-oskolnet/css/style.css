@@ -499,3 +499,116 @@ body.--lock {
   font-size: 18px;
   line-height: 25px;
 }
+
+.feed__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+}
+
+.feed__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 18px;
+  padding-left: 78px;
+  padding-right: 58px;
+  background: linear-gradient(92.37deg, #263057 29.38%, #1D1444 100.81%);
+  -webkit-box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  color: #fff;
+  height: 200px;
+}
+
+.feed__item:last-child {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.feed__title {
+  font-weight: 700;
+  font-size: 38px;
+  line-height: 49px;
+}
+
+.feed__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.form-feed__input-tel, .form-feed__input-name {
+  width: 390px;
+}
+
+.form-feed__btn {
+  font-size: 18px;
+  line-height: 25px;
+  height: 46px;
+  width: 220px;
+}
+
+.form-feed__checkbox {
+  opacity: 0;
+}
+
+.form-feed__checkbox + label {
+  margin-left: -35px;
+}
+
+.form-feed__checkbox + label::before {
+  content: '';
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border: 1px solid #fff;
+  border-radius: 1px;
+  margin-right: 0.5em;
+}
+
+.form-feed__checkbox:not(:disabled):not(:checked) + label:hover::before {
+  background-color: #fff;
+}
+
+.form-feed__checkbox:checked + label::before {
+  border-color: #6984F0;
+  background-color: #6984F0;
+}
+
+.form-feed__input-strit {
+  width: 519px;
+}
+
+.form-feed__input-home {
+  width: 185px;
+}
+
+.input {
+  padding: 10px 23px;
+  height: 46px;
+  border-radius: 5px;
+}

@@ -1,0 +1,100 @@
+.feed {
+
+    &__items {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 18px;
+
+        &:last-child {
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        padding-left: 78px;
+        padding-right: 58px;
+
+        background: linear-gradient(92.37deg, #263057 29.38%, #1D1444 100.81%);
+        box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.2);
+        border-radius: 15px;
+
+        color: $white;
+        height: 200px;
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 38px;
+        line-height: 49px;
+    }
+
+    &__form {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+}
+
+
+.form-feed {
+
+    &__input-tel,
+    &__input-name {
+        width: 390px;
+    }
+
+    &__btn {
+        font-size: 18px;
+        line-height: 25px;
+        height: 46px;
+        width: 220px;
+    }
+
+    &__checkbox {
+        opacity: 0;
+
+        &+label {
+            margin-left: -35px;
+        }
+
+        &+label::before {
+            content: '';
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border: 1px solid $white;
+            border-radius: 1px;
+            margin-right: 0.5em;
+        }
+
+        &:not(:disabled):not(:checked)+label:hover::before {
+            background-color: $white;
+        }
+
+        &:checked+label::before {
+            border-color: $color--secondary;
+            background-color: $color--secondary;
+        }
+    }
+
+    &__input-strit {
+        width: 519px;
+    }
+
+    &__input-home {
+        width: 185px;
+    }
+}
+
+.input {
+    padding: 10px 23px;
+    height: 46px;
+    border-radius: 5px;
+}
