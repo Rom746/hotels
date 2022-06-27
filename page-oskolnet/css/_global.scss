@@ -77,7 +77,7 @@ body {
     margin-left: auto;
     margin-right: auto;
 
-   
+
 
     // .slider__wrapper
 
@@ -100,5 +100,32 @@ body {
         flex: 0 0 100%;
         max-width: 100%;
         position: relative;
+    }
+
+    &__indicators {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 45px;
+        display: flex;
+        gap: 14px;
+        justify-content: center;
+        padding-left: 0;
+        margin: 0 15%;
+        user-select: none;
+    }
+
+    &__indicator {
+        // flex: 0 1 auto;
+        width: 9px;
+        height: 9px;
+        border-radius: 50%;
+        background-color: $color--primary-a;
+        cursor: pointer;
+        &--active {
+            width: 28px;
+            background-color: $color--secondary;
+            border-radius: 10px;
+        }
     }
 }
