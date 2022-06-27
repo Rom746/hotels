@@ -1,0 +1,48 @@
+.document {
+
+    &__inner {
+        padding-top: 51px;
+        padding-bottom: 22px;
+    }
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        padding: 46px 40px;
+        margin-top: 41px;
+
+        background: #F1F2F4;
+        border-radius: 15px;
+    }
+
+    &__item {
+        display: flex;
+        gap: 17px;
+        align-items: center;
+    }
+
+    &__btn {
+        display: block;
+        margin: 41px auto;
+        padding: 11px 65px;
+    }
+}
+
+.item-document {
+
+
+
+    &__image {
+        background-color: $white;
+        border-radius: 50%;
+    }
+
+    &__text {
+        font-weight: 400;
+        font-size: 17px;
+        line-height: 26px;
+
+        max-width: 265px;
+        min-width: 200px;
+    }
+}

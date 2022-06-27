@@ -1,0 +1,49 @@
+.partners {
+    background: $color--bg;
+
+    // .partners__wrapper
+
+    &__inner {
+        padding: 67px 0;
+    }
+
+    // .partners__title
+
+    &__title {
+    }
+
+    // .partners__slider
+
+    &__slider {
+    }
+
+    // .partners__content
+
+    &__content {
+        // margin-top: 35px;
+        padding: 35px 50px;
+        margin-bottom: 50px;
+
+        display: flex;
+        gap: 36px;
+    }
+
+    // .partners__image
+
+    &__image {
+        width: 240px;
+        height: 100px;
+        background-color: $white;
+        border-radius: 15px;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+.container {
+}
+.title {
+}
+.slider {
+}
