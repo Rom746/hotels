@@ -1,0 +1,58 @@
+.about {
+
+    // .about__inner
+
+    &__inner {
+        padding-top: 116px;
+        padding-bottom: 64px;
+    }
+
+    // .about__title
+
+    &__title {
+    }
+
+    // .about__content
+
+    &__content {
+        padding-top: 37px;
+        padding-right: 118px;
+        padding-bottom: 58px;
+
+        display: flex;
+        gap: 45px;
+        align-items: center;
+    }
+
+    // .about__image
+
+    &__image {
+    }
+
+    // .about__block-text
+
+    &__block-text {
+    }
+
+    // .about__text
+
+    &__text {
+        &:first-child{
+            padding-bottom: 50px;
+        }
+    }
+
+    // .about__btn
+
+    &__btn {
+        display: block;
+        margin: 0 auto;
+        padding: 11px 34px;
+    }
+}
+.container {
+}
+.title {
+}
+.btn {
+}

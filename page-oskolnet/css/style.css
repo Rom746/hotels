@@ -612,3 +612,31 @@ body.--lock {
   height: 46px;
   border-radius: 5px;
 }
+
+.about__inner {
+  padding-top: 116px;
+  padding-bottom: 64px;
+}
+
+.about__content {
+  padding-top: 37px;
+  padding-right: 118px;
+  padding-bottom: 58px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 45px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.about__text:first-child {
+  padding-bottom: 50px;
+}
+
+.about__btn {
+  display: block;
+  margin: 0 auto;
+  padding: 11px 34px;
+}
