@@ -15,6 +15,9 @@ const createSlider = () => {
         ul.dataset.id = count;
         ol.dataset.id = count++;
 
+
+
+
         let ind = 1;
 
         while (slider.children.length) {
@@ -38,11 +41,55 @@ const createSlider = () => {
             li.addEventListener('click', moveTo);
         }
 
+        if (slider.classList.contains('slider--b')) {
+            const btnWrapper = document.createElement('div');
+            const btnPrev = document.createElement('button');
+            const btnNext = document.createElement('button');
+            btnWrapper.className = 'slider__buttons';
+            btnPrev.className = 'slider__btn-prev slider__btn';
+            btnNext.className = 'slider__btn-next slider__btn';
+            [btnPrev, btnNext].forEach(btn => {
+                btn.addEventListener('click', move);
+                btnWrapper.append(btn);
+            });
+
+            slider.append(btnWrapper);
+        }
+
         wrapper.append(ul);
         slider.append(wrapper);
         slider.append(ol);
-
+        console.log(slider);
     }
+}
+
+const move = (e) => {
+    e.preventDefault();
+    const slider = e.target.parentElement.parentElement;
+    const items = slider.querySelector('.slider__items');
+    const direction = e.target.classList.contains('slider__btn-next') ? 1 : -1;
+    const currentSlide = slider.querySelector('.slider__item--active');
+    const index = parseInt(currentSlide.dataset.ind, 10);
+
+    if (index + direction == 0 || index + direction > items.children.length) { return ;}
+
+    const currentIndicator = slider.querySelector(`[data-to-ind="${index}"]`);
+    const nextIndicator = slider.querySelector(`[data-to-ind="${index + direction}"]`);
+
+    const nextSlide = slider.querySelector(`[data-ind="${index + direction}"]`);
+
+    nextSlide.classList.add('slider__item--active');
+    nextIndicator.classList.add('slider__indicator--active');
+
+    currentSlide.classList.remove('slider__item--active');
+    currentIndicator.classList.remove('slider__indicator--active');
+    
+    const h = (direction) * (-100);
+    const currentX = parseInt(items.dataset.translate, 10) || 0;
+
+    items.style.transform = `translateX(${h + currentX}%)`;
+    items.dataset.translate = h + currentX;
+   
 }
 
 const moveTo = (e) => {
@@ -50,29 +97,25 @@ const moveTo = (e) => {
     const id = e.target.parentElement.dataset.id;
     const index = parseInt(e.target.dataset.toInd, 10);
     const slider = document.querySelector(`[data-id="${id}"]`);
-    console.log(slider);
-    const carrentSlide = slider.querySelector('.slider__item--active');
-    const currentIndex = carrentSlide.dataset.ind;
+    
+    const currentSlide = slider.querySelector('.slider__item--active');
+    const currentIndex = currentSlide.dataset.ind;
 
     if (index == currentIndex) { return; }
 
-    const slide = slider.querySelector(`[data-ind="${index}"]`);
-    const slideInd = e.target.parentElement.querySelector(`[data-to-ind="${currentIndex}"]`);
+    const nextIndicator = e.target;
+    const currentIndicator = nextIndicator.parentElement.querySelector(`[data-to-ind="${currentIndex}"]`);
+    
+    const nextSlide = slider.querySelector(`[data-ind="${index}"]`);
 
-    console.log(slideInd, currentIndex);
+    nextSlide.classList.add('slider__item--active');
+    nextIndicator.classList.add('slider__indicator--active');
 
-
-
-    slide.classList.add('slider__item--active');
-    e.target.classList.add('slider__indicator--active');
-
-    carrentSlide.classList.remove('slider__item--active');
-    slideInd.classList.remove('slider__indicator--active');
+    currentSlide.classList.remove('slider__item--active');
+    currentIndicator.classList.remove('slider__indicator--active');
 
     const h = (index - currentIndex) * (-100);
     const currentX = parseInt(slider.dataset.translate, 10) || 0;
-
-    console.log(h);
 
     slider.style.transform = `translateX(${h + currentX}%)`;
     slider.dataset.translate = h + currentX;
@@ -81,8 +124,8 @@ const moveTo = (e) => {
 
 const setTabs = () => {
     const tabs = document.querySelectorAll('.tabs__item');
-    tabs.forEach(tab => 
-        tab.addEventListener('click',(event) => {
+    tabs.forEach(tab =>
+        tab.addEventListener('click', (event) => {
             const blockTab = document.querySelector(event.target.dataset.link);
             document.querySelector('.tabs__block--active').classList.toggle('tabs__block--active');
             document.querySelector('.tabs__item--active').classList.toggle('tabs__item--active');

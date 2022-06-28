@@ -23,12 +23,6 @@ body {
     max-width: 1210px;
     margin: 0 auto;
     padding: 0 15px;
-
-    @media (max-width: $breakpointA) {
-        // max-width: 970px;
-    }
-
-    border: 1px solid red;
 }
 
 .btn {
@@ -88,24 +82,40 @@ body {
     margin-left: auto;
     margin-right: auto;
 
+    &__buttons {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: calc(50% - 40px);
+        display: flex;
+        justify-content: space-between;
+        z-index: 100;
+    }
 
+    &__btn {
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+    }
 
-    // .slider__wrapper
+    &__btn-prev {
+        background: url(../img/arrow.svg);
+    }
+
+    &__btn-next {
+        background: url(../img/arrow.svg);
+        transform: rotate(180deg);
+    }
 
     &__wrapper {
         position: relative;
         overflow: hidden;
-        // background-color: #eee;
     }
-
-    // .slider__items
 
     &__items {
         display: flex;
         transition: transform .5s ease;
     }
-
-    // .slider__item
 
     &__item {
         flex: 0 0 100%;
@@ -127,7 +137,6 @@ body {
     }
 
     &__indicator {
-        // flex: 0 1 auto;
         width: 9px;
         height: 9px;
         border-radius: 50%;
