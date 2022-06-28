@@ -707,6 +707,19 @@ body.--lock {
   padding: 40px 0;
 }
 
+@media (max-width: 768px) {
+  .footer__contact-us {
+    max-width: 100%;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 50px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
+  }
+}
+
 .footer__content {
   position: relative;
 }
@@ -720,6 +733,16 @@ body.--lock {
           justify-content: space-between;
   max-width: 95%;
   padding: 25px 0;
+}
+
+@media (max-width: 768px) {
+  .footer__copyright {
+    max-width: 230px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 50px;
+    margin: auto;
+  }
 }
 
 .contact-us__title {
@@ -756,6 +779,11 @@ body.--lock {
   display: flex;
   gap: 30px;
   padding: 50px 0;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .content__item:not(:last-child) {

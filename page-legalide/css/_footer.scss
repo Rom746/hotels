@@ -3,13 +3,21 @@
     &__contact-us {
         display: flex;
         justify-content: space-between;
-        max-width: 90%;
 
+        max-width: 90%;
         padding: 40px 0;
+
+        @media (max-width: $breakpointC) {
+            max-width: 100%;
+            flex-wrap: wrap;
+            gap: 50px;
+            justify-content: center;
+            text-align: center;
+        }
     }
 
     &__content {
-        position: relative;  
+        position: relative;
     }
 
 
@@ -18,6 +26,14 @@
         justify-content: space-between;
         max-width: 95%;
         padding: 25px 0;
+
+        @media (max-width: $breakpointC) {
+            max-width: 230px;
+            flex-wrap: wrap;
+            gap: 50px;
+            margin: auto;
+        }
+
     }
 }
 
@@ -33,6 +49,7 @@
     &__btn {
 
         padding: 15px 40px;
+
         border-radius: 5px;
         background-color: $brown;
 
@@ -60,6 +77,8 @@
         display: flex;
         gap: 30px;
         padding: 50px 0;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
     &__item {
@@ -84,6 +103,7 @@
         line-height: 24px;
 
         color: $white;
+
         &.link--h6 {
             font-weight: 700;
             display: flex;
