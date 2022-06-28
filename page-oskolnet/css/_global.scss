@@ -60,6 +60,18 @@ body {
             color: $color--primary ;
         }
     }
+
+    &--w {
+
+        background-color: $white;
+        border-color: $white;
+        color: $color--primary;
+
+        &:hover {
+            background-color: $color--secondary;
+            color: $white;
+        }
+    }
 }
 
 .title {

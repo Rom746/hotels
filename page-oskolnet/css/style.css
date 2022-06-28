@@ -112,6 +112,17 @@ body.--lock {
   color: #263057;
 }
 
+.btn--w {
+  background-color: #fff;
+  border-color: #fff;
+  color: #263057;
+}
+
+.btn--w:hover {
+  background-color: #6984F0;
+  color: #fff;
+}
+
 .title {
   text-transform: uppercase;
   font-weight: 700;
@@ -278,6 +289,112 @@ body.--lock {
   font-size: 14px;
   letter-spacing: 0.28em;
   color: rgba(38, 48, 87, 0.2);
+}
+
+.footer {
+  background: linear-gradient(136.49deg, #263057 25.34%, #1D1444 89.06%);
+}
+
+.footer__inner {
+  padding: 100px 75px 55px 0;
+}
+
+.footer__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-bottom: 89px;
+}
+
+.footer__copyright {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  opacity: 0.5;
+  color: #fff;
+}
+
+.footer__copyright p {
+  max-width: 670px;
+}
+
+.content-footer__links :not(:last-child) {
+  padding-bottom: 5px;
+}
+
+.content-footer__link {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 29px;
+  color: #fff;
+}
+
+.content-footer__butttons {
+  padding-bottom: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 20px;
+}
+
+.content-footer__btn {
+  width: 206px;
+  height: 39px;
+  padding: 0;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 25px;
+}
+
+.content-footer__btn:last-child {
+  width: 178px;
+}
+
+.content-footer__tel {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 14px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 25px;
+  color: #fff;
+}
+
+.content-footer__tel span {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  opacity: 0.5;
+}
+
+.content-footer__tel:hover {
+  color: #6984F0;
+}
+
+.content-footer__tel:hover path {
+  fill: #6984F0;
+}
+
+.content-footer__social-link:hover path {
+  fill: #6984F0;
+}
+
+.content-footer__social-link:not(:last-child) {
+  margin-right: 12px;
 }
 
 .banner {
