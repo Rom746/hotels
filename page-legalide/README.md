@@ -1,13 +1,7 @@
-# Разработка landing-page Oscolnet
+# Разработка landing-page Legalide
 
-## Демо - [rom746.github.io/page2](https://rom746.github.io/page2/)
+## Демо - [rom746.github.io/page1](https://rom746.github.io/page1/)
 
-Дизайн - [figma.com/file](https://www.figma.com/file/2T7csSpFmxCQPJiJkZIBGs/%5BPublished%5D%5BRU%5D-%C2%ABOskolnet%C2%BB?node-id=0%3A1)
+Дизайн - [figma.com/file](https://www.figma.com/file/uYEVZl5ftL4M2mINrRZ3ZI/%5BPublished%5D%5BEN%5D-%C2%ABLegalide%C2%BB)
 
-Свёрстанная страница не адаптивна.
-
-Меню служит навигацией по странице.
-
-Слайдеры работают.
-
-Табы работают.
+Свёрстанная страница адаптивна под размер 320px.
